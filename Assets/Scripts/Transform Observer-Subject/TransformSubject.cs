@@ -17,6 +17,13 @@ public class TransformSubject : MonoBehaviour
         }
     }
 
+    private void TempUpdate(){
+        if (Input.GetMouseButtonDown(0)){
+            UpdateObservers();
+            Debug.Log("temp mouse down");
+        }
+    }
+
 
 
 }
