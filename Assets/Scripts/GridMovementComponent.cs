@@ -29,6 +29,7 @@ public class GridMovementComponent : MonoBehaviour
         }
 
         else if (!oneSpace){
+            // this needs to be expanded upon so that we get traverse along nodes one at a time, if we are set to one space, then we continue in our direciton!
             nextNode = currentNode.GetFurthestNode(direction);
         }
 
