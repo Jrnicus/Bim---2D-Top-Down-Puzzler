@@ -11,7 +11,7 @@ public class GridMovementComponent : MonoBehaviour
     public GridNode currentNode;
     public GridNode targetNode;
 
-    bool moving = false;
+    public bool moving = false;
 
     bool movingOneSpace = false;
 
@@ -51,9 +51,12 @@ public class GridMovementComponent : MonoBehaviour
             
         }
 
-        else if (transform.position == targetNode.transform.position){
+        else if (moving && transform.position == targetNode.transform.position){
             currentNode = targetNode;
             moving = false;
+
+            tileMovedEvent.Invoke();
+            
         }
     }
 

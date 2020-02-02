@@ -10,6 +10,10 @@ private GridMovementComponent gridMovement;
 
     public void Wind(Vector2 direction)
     {
+        if (gridMovement.moving == true){
+            return;
+        }
+
         gridMovement.Move(GetDirectionFromVector2(direction));
     }
 

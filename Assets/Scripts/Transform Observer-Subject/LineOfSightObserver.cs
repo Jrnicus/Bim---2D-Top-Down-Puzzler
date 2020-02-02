@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class LineOfSightObserver : TransformObserver
 {
+
+    public LayerMask blocksPath;
+
     public bool SuccessIfHidden = false;
 
     public UnityEvent successfulUpdate;
@@ -13,34 +16,38 @@ public class LineOfSightObserver : TransformObserver
 
         bool successfulUpdateState = false;
 
-        bool allRaysHit = true;
-        bool allRaysFailed = true;
+        int raysHit = 0;
+        int raysFailed = 0;
+        
 
-        foreach(TransformSubject subject in observedTransforms){
+        for(int i = 0; i < observedTransforms.Count; i++){
             
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, subject.transform.position - transform.position);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, observedTransforms[i].transform.position - transform.position, 100f, blocksPath);
 
-            if (hit.collider != null){
-                
-                if (hit.collider.transform == subject.transform){
-                    allRaysFailed = false;
-                } else {
-                    allRaysHit = false;
-                }
+                if (hit.collider != null){
+                    
+                    if (hit.collider.transform.Equals(observedTransforms[i].transform)){
+                        raysHit++;
+                    } else {
+                        raysFailed++;
+                    }
+                    
 
-            }
-            // Do a raycast to all of the targets
-
-            // if they all hit and SuccessIfHidden = false, set successfulUpdateState = true;
-            if (allRaysFailed && SuccessIfHidden){
-                successfulUpdateState = true;
-            }
-            // else if they all fail, and SuccessIfHidden = true, set successfulUpdateState = true;
-            else if (allRaysHit && !SuccessIfHidden){
-                successfulUpdateState = true;
-            }
+                } 
+            // Do a raycast to all of the targets         
 
         }
+
+        // if they all hit and SuccessIfHidden = false, set successfulUpdateState = true;
+            if (raysHit == observedTransforms.Count && SuccessIfHidden){
+                successfulUpdateState = true;
+                Debug.Log("Successful Rays == ObservedTransforms.Count");
+            }
+            // else if they all fail, and SuccessIfHidden = true, set successfulUpdateState = true;
+            else if (raysFailed == observedTransforms.Count && !SuccessIfHidden){
+                successfulUpdateState = true;
+                Debug.Log("Failed Rays: " + raysFailed + " == ObservedTransforms.count: " + observedTransforms.Count);
+            }
 
         if (successfulUpdateState){
             successfulUpdate.Invoke();
