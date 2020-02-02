@@ -13,11 +13,13 @@ public class GridMovementComponent : MonoBehaviour
 
     bool moving = false;
 
+    bool movingOneSpace = false;
+
     public UnityEvent tileMovedEvent;
 
 
     public void Start(){
-        Move(Direction.LEFT);
+        //Move(Direction.LEFT);
     }
 
     public void Move(Direction direction, bool oneSpace = false){

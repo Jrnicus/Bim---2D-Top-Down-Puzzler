@@ -3043,7 +3043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   observedTransforms:
   - {fileID: 1529499098}
-  SuccessIfHidden: 0
+  SuccessIfHidden: 1
   successfulUpdate:
     m_PersistentCalls:
       m_Calls: []
