@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GridMovementComponent : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GridMovementComponent : MonoBehaviour
     public GridNode targetNode;
 
     bool moving = false;
+
+    public UnityEvent tileMovedEvent;
 
 
     public void Start(){
