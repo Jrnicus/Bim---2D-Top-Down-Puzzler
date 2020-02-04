@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class LineOfSightObserver : TransformObserver
 {
 
-    public LayerMask blocksPath;
+    public LayerMask LightQuery;
 
     public bool SuccessIfHidden = false;
 
@@ -22,7 +22,7 @@ public class LineOfSightObserver : TransformObserver
 
         for(int i = 0; i < observedTransforms.Count; i++){
             
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, observedTransforms[i].transform.position - transform.position, 100f, blocksPath);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, observedTransforms[i].transform.position - transform.position, 100f, LightQuery);
 
                 if (hit.collider != null){
                     
