@@ -23,19 +23,19 @@ private GridMovementComponent gridMovement;
             // up or down
 
             if (dir.x >= 0){
-                return Direction.RIGHT;
-            } else return Direction.LEFT;
+                return Direction.EAST;
+            } else return Direction.WEST;
         }
 
         else if (Mathf.Abs(dir.y) > Mathf.Abs(dir.x)){
             // up or down
 
             if (dir.y >= 0){
-                return Direction.UP;
-            } else return Direction.DOWN;
+                return Direction.NORTH;
+            } else return Direction.SOUTH;
         }
 
-        return Direction.DOWN;
+        return Direction.SOUTH;
         
 
     }

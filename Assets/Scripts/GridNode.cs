@@ -4,7 +4,7 @@ using UnityEngine;
 using Unity;
 
     public enum Direction{
-        LEFT, RIGHT, UP, DOWN
+        WEST, EAST, NORTH, SOUTH
     }
 
 public class GridNode : MonoBehaviour
@@ -31,17 +31,17 @@ public class GridNode : MonoBehaviour
     public GridNode GetNode(Direction direction){
 
         switch (direction){
-            case Direction.DOWN:
+            case Direction.SOUTH:
             return down;
             
 
-            case Direction.UP: 
+            case Direction.NORTH: 
             return up;
 
-            case Direction.RIGHT:
+            case Direction.EAST:
             return right;
 
-            case Direction.LEFT: 
+            case Direction.WEST: 
             return left;
         }
 
@@ -85,19 +85,19 @@ public class GridNode : MonoBehaviour
         Vector3 spawnPos = transform.position;
 
         switch (direction){
-            case Direction.DOWN:
+            case Direction.SOUTH:
                 spawnPos += new Vector3 (0, -gridDistance, 0);
             break;
 
-            case Direction.UP: 
+            case Direction.NORTH: 
                 spawnPos += new Vector3(0, gridDistance);
             break;
 
-            case Direction.RIGHT:
+            case Direction.EAST:
                 spawnPos += new Vector3 (gridDistance, 0);
             break;
 
-            case Direction.LEFT: 
+            case Direction.WEST: 
                 spawnPos += new Vector3(-gridDistance, 0);
             break;
         }
@@ -114,22 +114,22 @@ public class GridNode : MonoBehaviour
 
         switch (direction){
 
-            case Direction.DOWN:
+            case Direction.SOUTH:
             this.down = node;
             node.up = this;
             break;
        
-            case Direction.UP:
+            case Direction.NORTH:
             this.up = node;
             node.down = this;
             break;
 
-            case Direction.RIGHT:
+            case Direction.EAST:
             this.right = node;
             node.left = this;
             break;
 
-            case Direction.LEFT:
+            case Direction.WEST:
             this.left = node;
             node.right = this;
             break;

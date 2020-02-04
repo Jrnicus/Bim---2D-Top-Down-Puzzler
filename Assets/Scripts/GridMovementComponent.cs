@@ -24,6 +24,10 @@ public class GridMovementComponent : MonoBehaviour
 
     public void Move(Direction direction, bool oneSpace = false){
 
+        if (this.currentNode == null){
+            return;
+        }
+
         GridNode nextNode = null;
 
         if (oneSpace){

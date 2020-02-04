@@ -20,7 +20,7 @@ public class GridNodeEditor : Editor
 
             
             GameObject[] objects = new GameObject[1];    
-            objects[0] = activeNode.SpawnNode(Direction.UP);
+            objects[0] = activeNode.SpawnNode(Direction.NORTH);
             Selection.objects = objects;
 
         }
@@ -29,7 +29,7 @@ public class GridNodeEditor : Editor
 
             GridNode activeNode = (GridNode)target;
             GameObject[] objects = new GameObject[1];
-            objects[0] = activeNode.SpawnNode(Direction.RIGHT);
+            objects[0] = activeNode.SpawnNode(Direction.EAST);
             Selection.objects = objects;
 
         }
@@ -39,7 +39,7 @@ public class GridNodeEditor : Editor
 
             GridNode activeNode = (GridNode)target;
             GameObject[] objects = new GameObject[1];
-            objects[0] = activeNode.SpawnNode(Direction.DOWN);
+            objects[0] = activeNode.SpawnNode(Direction.SOUTH);
 
 
             Selection.objects = objects;
@@ -50,7 +50,7 @@ public class GridNodeEditor : Editor
 
             GridNode activeNode = (GridNode)target;
             GameObject[] objects = new GameObject[1];
-            objects[0] = activeNode.SpawnNode(Direction.LEFT);
+            objects[0] = activeNode.SpawnNode(Direction.WEST);
             Selection.objects = objects;
 
         }
