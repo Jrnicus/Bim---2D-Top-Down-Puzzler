@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class RoomManager : MonoBehaviour
 {
@@ -12,8 +13,17 @@ public class RoomManager : MonoBehaviour
 
     public List<Direction> unlockDirections;
 
+    public bool unlocked = false;
+
+    public UnityEvent OnUnlock;
+
 
     public void Unlock(){
+
+        if (unlocked != false)
+        {
+            return;
+        }
 
         Debug.Log("Unlocking Room");
 
@@ -21,6 +31,10 @@ public class RoomManager : MonoBehaviour
             UnlockDoor(unlockDirection);
             Debug.Log(unlockDirection);
         }
+
+        unlocked = true;
+
+        OnUnlock.Invoke();
         
     }
 

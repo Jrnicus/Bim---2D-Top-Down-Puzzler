@@ -22,6 +22,12 @@ public class GridMovementComponent : MonoBehaviour
         //Move(Direction.LEFT);
     }
 
+    // To be used by Editor Extension
+    private void SnapToNextNode()
+    {
+        // sets current node to next node in a direction one space, and set transform.position to that position
+    }
+
     public void Move(Direction direction, bool oneSpace = false){
 
         if (this.currentNode == null){
