@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Matthew\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Matthew\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Bim - 2D Top Down Puzzler.1742923158.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Matthew\Documents\GitHub\Bim - 2D Top Down Puzzler" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="PlayerCamOverride.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="DeactivateComponent.cs" t="Include" />
+          <e p="GridMovementComponent.cs" t="Include" />
+          <e p="GridNode.cs" t="Include" />
+          <e p="GridNodeEditor.cs" t="Include" />
+          <e p="MouseAim.cs" t="Include" />
+          <e p="PlayerAimWeapon.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+          <e p="PushableGridUnit.cs" t="Include" />
+          <e p="RoomManager.cs" t="Include" />
+          <e p="ShootWindComponent.cs" t="Include" />
+          <e p="Transform Observer-Subject" t="Include">
+            <e p="LineOfSightObserver.cs" t="Include" />
+            <e p="TransformObserver.cs" t="Include" />
+            <e p="TransformSubject.cs" t="Include" />
+          </e>
+          <e p="WindAnimator.cs" t="Include" />
+          <e p="WindSystem.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Bim - 2D Top Down Puzzler.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
