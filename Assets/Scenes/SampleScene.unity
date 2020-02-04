@@ -834,7 +834,7 @@ MonoBehaviour:
   eastDoor: {fileID: 1342646461}
   southDoor: {fileID: 1874604735}
   westDoor: {fileID: 108922082}
-  unlockDirections: 01000000
+  unlockDirections: 02000000
 --- !u!4 &373822589
 Transform:
   m_ObjectHideFlags: 0
@@ -1652,7 +1652,7 @@ MonoBehaviour:
   windAnimator: {fileID: 1673507852}
   interactables:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
 --- !u!1 &579863639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,7 +1730,7 @@ MonoBehaviour:
   tileMovedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 579863640}
+      - m_Target: {fileID: 0}
         m_MethodName: UpdateObservers
         m_Mode: 1
         m_Arguments:
@@ -2053,7 +2053,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 494e52e39770e784cb3bcdb40ba7f59c, type: 3}
   m_Color: {r: 1, g: 0.8527862, b: 0, a: 1}
   m_FlipX: 0
@@ -2077,13 +2077,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4012af1b1f2296047b2e19e3637d6f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 1
+  MoveSpeed: 5
   currentNode: {fileID: 1525432438}
   targetNode: {fileID: 0}
   moving: 0
   tileMovedEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2037340944}
+        m_MethodName: UpdateState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &736731828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3779,7 +3790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037340942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 2.5, z: 0}
+  m_LocalPosition: {x: 2.5, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 373822589}
