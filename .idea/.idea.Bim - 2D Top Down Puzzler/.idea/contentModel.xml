@@ -6,7 +6,6 @@
     <e p="C:\Users\Matthew\Documents\GitHub\Bim - 2D Top Down Puzzler" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="PlayerCamOverride.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="DeactivateComponent.cs" t="Include" />
           <e p="GridMovementComponent.cs" t="Include" />
@@ -14,6 +13,7 @@
           <e p="GridNodeEditor.cs" t="Include" />
           <e p="MouseAim.cs" t="Include" />
           <e p="PlayerAimWeapon.cs" t="Include" />
+          <e p="PlayerCamOverride.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PushableGridUnit.cs" t="Include" />
           <e p="RoomManager.cs" t="Include" />
