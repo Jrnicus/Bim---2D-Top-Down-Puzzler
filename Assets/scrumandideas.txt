@@ -20,3 +20,9 @@ Enemies, TBD
 Free Grid Movement
 
 Ice Floorss
+
+
+Interfaces, 
+
+
+Heavy Enemies can't be winded.
