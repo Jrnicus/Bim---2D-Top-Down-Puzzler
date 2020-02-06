@@ -1,0 +1,22 @@
+Grid System Elaboration
+
+
+Angled Light Calculation
+
+Push, Push Spell, Tracks.
+
+Vector Targeted Lightning.
+
+Tesla Coil Puzzle Puzzle filter, they're an obstacle at first, but you'll reassess them.
+
+Quick Access, or Scroll sheel for spell switching.
+
+Light a flamable object spell.
+
+Fire Pathfinding. Potions, Spells, 
+
+Enemies, TBD
+
+Free Grid Movement
+
+Ice Floorss
