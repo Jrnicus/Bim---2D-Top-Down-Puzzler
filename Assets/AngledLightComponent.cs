@@ -36,6 +36,14 @@ public class AngledLightComponent : MonoBehaviour
         
     }
 
+    public bool HitsTarget(Transform target)
+    {
+
+
+
+        return false;
+    }
+
     // Update is called once per frame
     void Update()
     {
