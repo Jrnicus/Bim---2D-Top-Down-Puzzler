@@ -6,7 +6,7 @@ using Cinemachine;
 public class PlayerCamOverride : MonoBehaviour
 {
 
-    public CinemachineVirtualCamera cam;
+    public CinemachineVirtualCamera roomCamera;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -31,7 +31,7 @@ public class PlayerCamOverride : MonoBehaviour
 
     public void SetCamPriority(int priority)
     {
-        cam.Priority = priority;
+        roomCamera.Priority = priority;
     }
 
 
