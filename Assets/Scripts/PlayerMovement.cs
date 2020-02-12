@@ -38,10 +38,5 @@ public class PlayerMovement : MonoBehaviour
 
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
-        bool flipY = lookDir.x < 0 ? true : false;
-        {
-
-            playerSprite.flipX = !flipY;
-        }
     }
 }
